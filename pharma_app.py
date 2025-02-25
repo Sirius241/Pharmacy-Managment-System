@@ -312,7 +312,7 @@ def check_inventory_and_notify():
             for m_id, info in manager_notifications.items():
                 # For demo purposes, we use a predefined email address.
                 # In a real system, you could fetch the manager's email from the database.
-                send_notification_email(info['M_name'], info['drugs'], recipient_email='siriabhat.cs22@rvce.edu.in')
+                send_notification_email(info['M_name'], info['drugs'], recipient_email='add email id')
         else:
             print("All drugs are in stock.")
     except mysql.connector.Error as err:
@@ -328,8 +328,8 @@ def send_notification_email(manager_name, drugs, recipient_email):
     # Email server configuration: update with your actual SMTP server settings
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
-    smtp_username = 'siriashokbhat@gmail.com'
-    smtp_password = 'povxtjpeiyjwauws'
+    smtp_username = ''
+    smtp_password = ''
     
     from_email = smtp_username
     subject = "Out of Stock Notification - Pharmacy Management System"
